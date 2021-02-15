@@ -8,8 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SelfCare">
-        <activity android:name=".Register"></activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -4,11 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Login"
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pinkish" />
+
+    <ImageView
+        android:id="@+id/imgLogin"
+        android:layout_below="@+id/toolBar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/login"/>
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_below="@+id/imgLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/enter_username"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtUser"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/enter_password"
+        android:textColor="@color/black"
+        android:inputType="textWebPassword"
+        android:maxLines="1"
+        />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_in"
+        android:onClick="Onclick"
+        android:textSize="20sp"
+        android:background="@color/pinkish"/>
 
     <TextView
+        android:id="@+id/txtForgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hi"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnSignIn"
+        android:layout_marginTop="20dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+
+        />
 
 </RelativeLayout>
