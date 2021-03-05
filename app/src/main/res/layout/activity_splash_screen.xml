@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffb1b1"
+        tools:context=".SplashScreen">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the "
+            android:textSize="20pt"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30pt"
+            android:textStyle="bold"
+            android:id="@+id/txt1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Self Care App"
+            android:textSize="20pt"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5pt"
+            android:textStyle="bold"
+            android:id="@+id/txt2"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/splashscreen"
+            android:id="@+id/animation"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Breath in..."
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/in"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breath out..."
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/out"
+            />
+
+    </LinearLayout>
+

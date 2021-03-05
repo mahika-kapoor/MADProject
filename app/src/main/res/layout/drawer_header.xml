@@ -9,7 +9,6 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginLeft="20dp"
-        android:onClick="ClickLogo"
         android:src="@drawable/nav_header"/>
 
     <TextView

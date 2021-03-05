@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32642419083",
+    "project_id": "selfcare-e3350",
+    "storage_bucket": "selfcare-e3350.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32642419083:android:02ba9d37940623f9d7478e",
+        "android_client_info": {
+          "package_name": "com.entropy.selfcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32642419083-6748gb17rnbgekl7pn1rdf029qrb7oj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu6jW4_UW3QFDGnvmHcNZ5Pf2guBqok34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32642419083-6748gb17rnbgekl7pn1rdf029qrb7oj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

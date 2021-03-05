@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.entropy.selfcare.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.entropy.selfcare.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_tracker"
+        android:name="com.entropy.selfcare.TrackerFragment"
+        android:label="Tracker"
+        tools:layout="@layout/fragment_tracker" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.entropy.selfcare.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bottom_meditation"
+        android:name="com.entropy.selfcare.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" />
+    <fragment
+        android:id="@+id/bottom_yoga"
+        android:name="com.entropy.selfcare.YogaFragment"
+        android:label="fragment_yoga"
+        tools:layout="@layout/fragment_yoga" />
+    <fragment
+        android:id="@+id/bottom_rant"
+        android:name="com.entropy.selfcare.RantFragment"
+        android:label="fragment_rant"
+        tools:layout="@layout/fragment_rant" />
+    <fragment
+        android:id="@+id/bottom_anxiety"
+        android:name="com.entropy.selfcare.AnxietyFragment"
+        android:label="fragment_anxiety"
+        tools:layout="@layout/fragment_anxiety" />
+</navigation>

@@ -5,6 +5,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,12 +18,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class HomePage extends AppCompatActivity {
     //Initialize Variable
-    DrawerLayout drawerLayout;
 
 
     @Override
@@ -28,65 +34,32 @@ public class HomePage extends AppCompatActivity {
 
         //Assign Variable
 
-        drawerLayout = findViewById(R.id.drawerLayout);
-        NavigationView nv = (NavigationView) findViewById(R.id.navigationView);
-        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        findViewById(R.id.imgMenu).setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch(id)
-                {
-                    case R.id.nav_profile:
-                        Toast.makeText(HomePage.this, "Profile",Toast.LENGTH_SHORT).show();break;
-                    case R.id.nav_settings:
-                        Toast.makeText(HomePage.this, "Settings",Toast.LENGTH_SHORT).show();break;
-                    case R.id.nav_tracker:
-                        Toast.makeText(HomePage.this, "Tracker",Toast.LENGTH_SHORT).show();break;
-                    case R.id.nav_logout:
-                        Toast.makeText(HomePage.this, "Logout",Toast.LENGTH_SHORT).show();break;
-                    default:
-                        return true;
-                }
-
-
-                return true;
-
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
+        NavigationView navigationView = findViewById(R.id.navigationView);
+
+        NavController navController = Navigation.findNavController(this,R.id.navHostFragment);
+        NavigationUI.setupWithNavController(navigationView,navController);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        NavHostFragment navHostFragment =       (NavHostFragment)getSupportFragmentManager()
+                .findFragmentById(R.id.navHostFragment);
+        NavigationUI.setupWithNavController(bottomNavigationView,
+                navHostFragment.getNavController());
+
+
+
     }
 
-
-    public void ClickMenu(View view){
-        //open drawer
-        openDrawer(drawerLayout);
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
     }
-
-    private static void openDrawer(DrawerLayout drawerLayout) {
-        drawerLayout.openDrawer(GravityCompat.START);
-    }
-
-    public void ClickLogo(View view){
-        //close drawer
-        closeDrawer(drawerLayout);
-    }
-
-    private static void closeDrawer(DrawerLayout drawerLayout) {
-        //Close drawer layout
-        //check condition
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            //when drawer is open
-            //close drawer
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-    }
-
-    private static void redirectActivity(Activity activity, Class aClass){
-        //initialize intent
-        Intent intent = new Intent(activity,aClass);
-        //set flag
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //start activity
-        activity.startActivity(intent);
-    }
-
 }
