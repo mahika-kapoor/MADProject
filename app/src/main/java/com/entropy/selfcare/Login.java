@@ -1,5 +1,6 @@
 package com.entropy.selfcare;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -9,19 +10,27 @@ import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Login extends AppCompatActivity {
 
+
+    FirebaseAuth fAuth;
     TextView textView;
     Button button;
-    EditText editText;
+    EditText mEmail, mPass;
     ImageView imageView;
 
 
@@ -35,19 +44,45 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().setTitle("Login");
 
         button = (Button) findViewById(R.id.btnSignIn);
-        editText = (EditText) findViewById(R.id.edtUser);
-        editText = (EditText) findViewById(R.id.edtPassword);
+        mEmail = (EditText) findViewById(R.id.edtUser);
+        mPass = (EditText) findViewById(R.id.edtPassword);
         imageView = (ImageView) findViewById(R.id.imgLogin);
+        fAuth = FirebaseAuth.getInstance();
 
-    }
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = mEmail.getText().toString().trim();
+                String password = mPass.getText().toString().trim();
 
-    public void Onclick(View View){
-        String button_text;
-        button_text = ((Button)View).getText().toString();
-        if(button_text.equals("Sign In"))
-        {
-            Intent Start_page = new Intent(this,HomePage.class);
-            startActivity(Start_page);
-        }
+                if (TextUtils.isEmpty(email)) {
+                    mEmail.setError("Email is required");
+                    return;
+                }
+                if (TextUtils.isEmpty(password)) {
+                    mPass.setError("Password is required");
+                    return;
+                }
+                if (password.length() < 6) {
+                    mPass.setError("Password must be at least 6 characters long!");
+                    return;
+
+                }
+
+                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(Login.this,"Logged in successfully",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),HomePage.class));
+                        }else{
+                            Toast.makeText(Login.this,"Error has occurred"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+            }
+
+        });
     }
 }
