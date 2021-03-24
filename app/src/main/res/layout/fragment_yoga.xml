@@ -9,7 +9,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yoga"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
+        android:text="YOGA"
+        android:layout_marginHorizontal="170dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp" />
+
 </FrameLayout>
