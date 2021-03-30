@@ -6,21 +6,37 @@
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/dreamer_home" />
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="Welcome to a space with where you can leave your maladies behind"
+        android:textAlignment="center"
+        android:layout_marginTop="80dp"
+        android:textColor="#CA5A5A"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:text="logout"
         android:onClick="logout"
         android:textColor="@color/black"
         android:background="@color/pinkish"
         />
+
+
 
 </FrameLayout>
