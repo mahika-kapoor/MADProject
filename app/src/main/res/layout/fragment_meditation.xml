@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MeditationFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,13 +14,14 @@
         android:layout_marginHorizontal="150dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/gridview"
-        android:layout_margin="80sp"
-        android:rowCount="3"
-        android:columnCount="2"
+        android:layout_margin="90sp"
+        android:rowCount="4"
+        android:columnCount="1"
         android:background="@color/white">
     <Button
         android:id="@+id/button1"
@@ -27,54 +29,36 @@
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:background="@color/pinkish"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:layout_margin="5sp"
-        android:text="Meditation"/>
+        android:text="Meditation for Stress"/>
+
         <Button
             android:id="@+id/button2"
-
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="@color/pinkish"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:layout_margin="5sp"
-            android:text="Meditation"/>
+            android:text="Meditation for Sleep"/>
         <Button
             android:id="@+id/button3"
             android:layout_gravity="fill"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="@color/pinkish"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:layout_margin="5sp"
-            android:text="Meditation"/>
+            android:text="Meditation to Relax"/>
         <Button
             android:id="@+id/button4"
             android:layout_gravity="fill"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="@color/pinkish"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:layout_margin="5sp"
-            android:text="Meditation"/>
-        <Button
-            android:id="@+id/button5"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:background="@color/pinkish"
-            android:textSize="15sp"
-            android:layout_margin="5sp"
-            android:text="Meditation"/>
-        <Button
-            android:id="@+id/button6"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:background="@color/pinkish"
-            android:textSize="15sp"
-            android:layout_margin="5sp"
-            android:text="Meditation"/>
+            android:text="Meditation for Anger"/>
 
     </GridLayout>
 </FrameLayout>
