@@ -29,5 +29,11 @@ public class meditation extends AppCompatActivity {
                 startActivity(new Intent(meditation.this, medforstress.class));
             }
         });
+        mbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(meditation.this, medforsleep.class));
+            }
+        });
     }
 }
