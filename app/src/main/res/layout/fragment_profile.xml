@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_margin="15dp"
-            android:text= "your name"/>
+            android:text= "Nandhini"/>
 
         <TextView
             android:id="@+id/txtProfileEmail"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_margin="15dp"
-            android:text="Your Email"/>
+            android:text="nandhini093@gmail.com"/>
 
 
     </LinearLayout>
