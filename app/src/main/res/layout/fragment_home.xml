@@ -26,17 +26,4 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="60dp"
-        android:text="logout"
-        android:onClick="logout"
-        android:textColor="@color/black"
-        android:background="@color/pinkish"
-        />
-
-
-
 </FrameLayout>

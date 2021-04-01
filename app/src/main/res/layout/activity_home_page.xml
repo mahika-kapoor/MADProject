@@ -11,16 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearHomePage"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <include
-            layout="@layout/main_toolbar" />
+            <include layout="@layout/main_toolbar" />
 
-    </LinearLayout>
+        </LinearLayout>
     
     <fragment
         android:layout_width="match_parent"
