@@ -1,12 +1,18 @@
 package com.entropy.selfcare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +66,44 @@ public class YogaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_yoga, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ListView listView = view.findViewById(R.id.listView);
+
+        //create data
+        ArrayList<Person> arrayList =  new ArrayList<>();
+
+        arrayList.add(new Person(R.drawable.yoga11, "Sunrise Pose", "Beginners Pose"));
+        arrayList.add(new Person(R.drawable.yoga2, "Downward Dog Pose", "Beginners Pose"));
+        arrayList.add(new Person(R.drawable.yoga3, "Wheel Pose", "Beginners Pose"));
+        arrayList.add(new Person(R.drawable.yoga4, "Boat Pose", "Beginners Pose"));
+        arrayList.add(new Person(R.drawable.yoga5, "Warrior Pose", "Intermediate Pose"));
+        arrayList.add(new Person(R.drawable.yoga6, "Cobra Pose", "Intermediate Pose"));
+        arrayList.add(new Person(R.drawable.yoga7, "Crossbow Pose", "Intermediate Pose"));
+        arrayList.add(new Person(R.drawable.yoga8, "Stone Pose", "Intermediate Pose"));
+
+        PersonAdapter personAdapter = new PersonAdapter(getActivity(),R.layout.list_row,arrayList);
+
+        listView.setAdapter(personAdapter);
+        listView.setOnItemClickListener((adapterView, v, i, l) -> {
+            switch(i)
+            {
+                case 0: startActivity(new Intent(getActivity(),Yoga1.class));
+                    break;
+                case 1: startActivity(new Intent(getActivity(),Yoga2.class));
+                    break;
+                case 2: startActivity(new Intent(getActivity(),Yoga3.class));
+                    break;
+                case 3: startActivity(new Intent(getActivity(),Yoga4.class));
+                    break;
+                case 4: startActivity(new Intent(getActivity(),Yoga5.class));
+                    break;
+                default:
+                    break;
+            }
+        });
     }
 }

@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
@@ -60,8 +63,13 @@ public class HomePage extends AppCompatActivity {
                         }).setNegativeButton("Cancel", (dialog, which) -> {
                             // Do nothing
                         }).show();
+                return true;
+            } else {
+                boolean handled = NavigationUI.onNavDestinationSelected(item, navController);
+                if (handled)
+                    drawerLayout.closeDrawer(navigationView);
+                return handled;
             }
-            return true;
         });
     }
 }

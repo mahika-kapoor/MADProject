@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkish"
+    android:orientation="vertical"
+    tools:context=".Yoga1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:text="The Wheel Pose"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"/>
+
+            <ImageView
+                android:layout_width="278dp"
+                android:layout_height="252dp"
+                android:layout_gravity="center"
+                android:src="@drawable/yoga3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="15sp"/>
+
+            <TextView
+                android:layout_width="343dp"
+                android:layout_height="209dp"
+                android:layout_marginLeft="15sp"
+                android:text="1. Lie down on your back. \n2. Gently start putting pressure on your hands.
+        \n3. Lift your body slowly. \n4. Your body should form a circle and your hands and legs aligned.
+        \n5. Remain in the pose for 30 seconds and then repeat the pose again."
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benefits"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="15sp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="348dp"
+                android:layout_height="111dp"
+                android:text="1. Good for Digestion. \n2. Improves lungs condition.
+        \n3. Can reduce back pain. \n4. Improves flexibilty. \n"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -2,11 +2,20 @@ package com.entropy.selfcare;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +23,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class AnxietyFragment extends Fragment {
+
+    Button bt;
+    Spinner sp;
+    LinearLayout ll;
+    TouchScreen tc;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,4 +75,35 @@ public class AnxietyFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_anxiety, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TouchScreen tc= new TouchScreen(getActivity(),null);
+        LinearLayout ll= view.findViewById(R.id.screen);
+        Spinner sp= view.findViewById(R.id.spin);
+        Button bt= view.findViewById(R.id.btn_clear);
+
+        ll.addView(tc);
+
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tc.clearCanvas();
+            }
+        });
+        sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                tc.changeColor(String.valueOf(sp.getSelectedItem()));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
 }

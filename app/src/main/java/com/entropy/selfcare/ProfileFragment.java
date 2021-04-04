@@ -2,11 +2,18 @@ package com.entropy.selfcare;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +67,28 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TextView fullName, email;
+        FirebaseAuth fAuth;
+        FirebaseFirestore fstore;
+        String userID;
+
+        fullName = view.findViewById(R.id.txtProfileName);
+        email = view.findViewById(R.id.txtProfileEmail);
+
+        fAuth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+
+        userID = fAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference = fstore.collection("users").document(userID);
+        documentReference.addSnapshotListener(getActivity(), (documentSnapshot, e) -> {
+            fullName.setText(documentSnapshot.getString("fname"));
+            email.setText(documentSnapshot.getString("email"));
+        });
     }
 }
