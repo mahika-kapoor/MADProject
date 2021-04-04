@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Yoga5"></activity>
+        <activity android:name=".Yoga4" />
+        <activity android:name=".Yoga3" />
+        <activity android:name=".Yoga2" />
         <activity android:name=".Yoga1" />
         <activity android:name=".Logout" />
         <activity android:name=".SplashScreen">

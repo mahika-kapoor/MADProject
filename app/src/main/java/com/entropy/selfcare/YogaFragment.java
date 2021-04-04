@@ -93,6 +93,14 @@ public class YogaFragment extends Fragment {
             {
                 case 0: startActivity(new Intent(getActivity(),Yoga1.class));
                     break;
+                case 1: startActivity(new Intent(getActivity(),Yoga2.class));
+                    break;
+                case 2: startActivity(new Intent(getActivity(),Yoga3.class));
+                    break;
+                case 3: startActivity(new Intent(getActivity(),Yoga4.class));
+                    break;
+                case 4: startActivity(new Intent(getActivity(),Yoga5.class));
+                    break;
                 default:
                     break;
             }

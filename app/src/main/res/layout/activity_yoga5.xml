@@ -19,9 +19,9 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="222dp"
+                android:layout_width="wrap_content"
                 android:layout_height="66dp"
-                android:text="Sunrise Pose"
+                android:text="The Warrior Pose"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
@@ -31,7 +31,7 @@
                 android:layout_width="278dp"
                 android:layout_height="252dp"
                 android:layout_gravity="center"
-                android:src="@drawable/yoga11"/>
+                android:src="@drawable/yoga5"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,9 +46,9 @@
                 android:layout_width="343dp"
                 android:layout_height="209dp"
                 android:layout_marginLeft="15sp"
-                android:text="1. Sit cross legged. \n2. Lift your left leg slowly behind your back.
-        \n3. Raise both your hand and touch your leg. \n4. Your head should face the sky.
-        \n5. Remain in the pose for 30 seconds and then do it with your right leg."
+                android:text="1. Stand Straight. \n2. Raise both your hands to shoulder level aligned.
+        \n3. Bend your right leg. \n4. Your left leg should lie behind your back.
+        \n5. Remain in the pose for 30 seconds and then repeat again with left leg."
                 android:textSize="20sp" />
 
             <TextView
@@ -63,8 +63,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="348dp"
                 android:layout_height="111dp"
-                android:text="1. Good for Digestion. \n2. Improves lungs condition.
-        \n3. Can reduce back pain. \n4. Improves flexibilty. \n"
+                android:text="1. Good for core strenght. \n2. Improves joint condition.
+        \n3. Good for weight loss. \n4. Improves flexibilty. \n"
                 android:textSize="20sp"
                 android:layout_marginLeft="15sp"
                 />
