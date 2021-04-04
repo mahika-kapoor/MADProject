@@ -19,7 +19,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Welcome to a space with where you can leave your maladies behind"
+        android:text="Welcome to a space where you can leave your worries behind"
         android:textAlignment="center"
         android:layout_marginTop="80dp"
         android:textColor="#CA5A5A"
