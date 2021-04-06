@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".medforsleep">
+    tools:context=".medforanger">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meditation for Sleep"
+        android:text="Meditation for Anger"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -24,15 +24,15 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/medforsleep"
+        android:src="@drawable/medanger"
         android:layout_marginTop="40dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="A slow meditation session to put you to Sleep"
+        android:text="Meditation to control your Anger"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="450dp"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -41,29 +41,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        tools:text="20:00"
-        android:layout_marginTop="450dp"
+        tools:text="10:00"
+        android:layout_marginTop="550dp"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/countdown_button"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="630dp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "\nStep 1: Lie down in a comfortable position. Notice the weight of your body on the bed.\n
+        android:text = "\nStep 1: Start by taking deep breaths. Breathe in through your nose, let your belly fill with air. Breathe out through your nose.\n
 \nStep 2: Start the Timer.\n
-\nStep 3: Focus on your face. Soften your jaw, eyes and facial muscles.\n
-\nStep 4: Move to your neck and shoulders. Relax them.\n
-\nStep 5: Continue down your body, moving to your arms and fingers. Continue to your stomach, back, hips, legs and feet. Notice how each part feels."
-        android:layout_marginTop="600dp"
+\nStep 3: Do 'hmm' and hold it for as long as you can. Feel the vibrations in your throat and jaw.\n
+\nStep 4: Alternate between Step 1 and 3 till you feel considerably more calm."
+        android:layout_marginTop="680dp"
         android:textSize="22sp"
         android:textColor="@color/black"
         />
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

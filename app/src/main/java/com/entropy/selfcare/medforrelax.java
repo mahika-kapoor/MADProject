@@ -8,18 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class medforstress extends AppCompatActivity {
+public class medforrelax extends AppCompatActivity {
     private TextView countdownText;
     private Button countdownButton;
     private CountDownTimer countDownTimer;
-    private long timeLeftInMilliseconds=6000000;
+    private long timeLeftInMilliseconds=12000000;
     private boolean timerRunning;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medforstress);
+        setContentView(R.layout.activity_medforrelax);
 
         countdownText = findViewById(R.id.countdown_text);
         countdownButton = findViewById(R.id.countdown_button);
@@ -45,8 +43,8 @@ public class medforstress extends AppCompatActivity {
         countDownTimer = new CountDownTimer(timeLeftInMilliseconds,1000) {
             @Override
             public void onTick(long l) {
-                 timeLeftInMilliseconds = l;
-                 updateTimer();
+                timeLeftInMilliseconds = l;
+                updateTimer();
             }
 
             @Override
@@ -58,9 +56,9 @@ public class medforstress extends AppCompatActivity {
         timerRunning=true;
     }
     public void stoptimer(){
-       countDownTimer.cancel();
+        countDownTimer.cancel();
         countdownButton.setText("START");
-       timerRunning=false;
+        timerRunning=false;
     }
 
     public void updateTimer(){

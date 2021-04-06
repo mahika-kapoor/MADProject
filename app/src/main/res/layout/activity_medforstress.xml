@@ -5,12 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".medforstress">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meditation for Stress"
         android:layout_marginHorizontal="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:textSize="20sp" />
 
     <ImageView
@@ -32,9 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        tools:text="10:00"
+        tools:text= "10:00"
         android:layout_marginTop="450dp"
         android:layout_centerHorizontal="true"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,13 +58,15 @@
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text = "Step 1: Get into a comfortable position.
-                         You could sit in a comfortable chair or sit cross-legged on the ground.
-Step 2: Start the Timer.
-Step 3: Breathe in for 2 counts, and breathe out for 3 counts.
-Step 4: With every exhale, expell all thoughts from your head until all that you can think of is your breathing"
+         android:text = "\nStep 1: Get into a comfortable position. You could sit in a comfortable chair or sit cross-legged on the ground.\n
+\nStep 2: Start the Timer.\n
+\nStep 3: Breathe in for 2 counts, and breathe out for 3 counts.\n
+\nStep 4: With every exhale, feel yourslef expelling all thoughts from your head until all that you can think of is your breathing"
          android:layout_marginTop="600dp"
          android:textSize="22sp"
          android:textColor="@color/black"
          />
+    </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

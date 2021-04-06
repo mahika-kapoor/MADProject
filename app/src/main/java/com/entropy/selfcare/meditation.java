@@ -37,7 +37,13 @@ public class meditation extends AppCompatActivity {
         mbutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                startActivity(new Intent(meditation.this, medforsleep.class));
+                startActivity(new Intent(meditation.this, medforanger.class));
+            }
+        });
+        mbutton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(meditation.this, medforrelax.class));
             }
         });
     }

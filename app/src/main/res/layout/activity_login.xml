@@ -26,7 +26,7 @@
     <EditText
         android:id="@+id/edtUser"
         android:layout_below="@+id/imgLogin"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:hint="@string/enter_username"
@@ -35,7 +35,7 @@
 
     <EditText
         android:id="@+id/edtPassword"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtUser"

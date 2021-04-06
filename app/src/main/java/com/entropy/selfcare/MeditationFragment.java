@@ -73,35 +73,37 @@ public class MeditationFragment extends Fragment {
         Button mbutton2 = null;
         Button mbutton3 = null;
         Button mbutton4 = null;
-        setContentView(R.layout.fragment_meditation);
 
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.fragment_meditation);
-            mbutton1 = mbutton1.findViewById(R.id.button1);
-            mbutton2 = mbutton1.findViewById(R.id.button2);
-            mbutton3 = mbutton1.findViewById(R.id.button3);
-            mbutton4 = mbutton1.findViewById(R.id.button4);
-            mbutton1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v){
-                    startActivity(new Intent(getActivity(), medforstress.class));
-                }
-            });
-            mbutton2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v){
-                    startActivity(new Intent(getActivity(), medforsleep.class));
-                }
-            });
-            mbutton3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v){
-                    startActivity(new Intent(getActivity(), medforsleep.class));
-                }
-            });
+
+        mbutton1 = view.findViewById(R.id.button1);
+        mbutton2 = view.findViewById(R.id.button2);
+        mbutton3 = view.findViewById(R.id.button3);
+        mbutton4 = view.findViewById(R.id.button4);
+        mbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforstress.class));
+            }
+        });
+        mbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforsleep.class));
+            }
+        });
+        mbutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforanger.class));
+            }
+        });
+        mbutton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforrelax.class));
+            }
+        });
 
     }
 
-    private void setContentView(int fragment_meditation) {
-    }
 }

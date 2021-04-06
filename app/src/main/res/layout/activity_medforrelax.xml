@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".medforsleep">
+    tools:context=".medforrelax">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meditation for Sleep"
+        android:text="Meditation To Relax"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -24,12 +24,12 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/medforsleep"
+        android:src="@drawable/medrelax"
         android:layout_marginTop="40dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="A slow meditation session to put you to Sleep"
+        android:text="Meditation to help you Relax and Unwind"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
         android:layout_marginTop="350dp"
@@ -54,16 +54,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "\nStep 1: Lie down in a comfortable position. Notice the weight of your body on the bed.\n
+        android:text = "\nStep 1: Remove all distractions from your room, including your phone. Sit or lie down in a comfortable position.\n
 \nStep 2: Start the Timer.\n
-\nStep 3: Focus on your face. Soften your jaw, eyes and facial muscles.\n
-\nStep 4: Move to your neck and shoulders. Relax them.\n
-\nStep 5: Continue down your body, moving to your arms and fingers. Continue to your stomach, back, hips, legs and feet. Notice how each part feels."
+\nStep 3: Inhale for 10 counts, hold your breath for 10 counts and exhale for 10 counts. Repeat at least 10 times.\n
+\nStep 4: Inhale and tense your body. Pause, relax and exhale. Repeat at least 5 times."
         android:layout_marginTop="600dp"
         android:textSize="22sp"
         android:textColor="@color/black"
         />
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>
