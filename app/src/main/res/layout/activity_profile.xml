@@ -7,20 +7,24 @@
     android:id="@+id/drawerLayout"
     tools:context=".Profile">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/linearHomePage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <include
-            android:id="@+id/include"
-            layout="@layout/main_toolbar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            layout="@layout/main_toolbar"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"

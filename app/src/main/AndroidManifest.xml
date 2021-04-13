@@ -24,7 +24,6 @@
         <activity android:name=".Yoga3" />
         <activity android:name=".Yoga2" />
         <activity android:name=".Yoga1" />
-        <activity android:name=".Logout" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
