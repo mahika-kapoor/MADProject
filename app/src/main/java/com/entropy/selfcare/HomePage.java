@@ -33,12 +33,7 @@ public class HomePage extends AppCompatActivity {
         //Assign Variable
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-        findViewById(R.id.imgMenu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
+        findViewById(R.id.imgMenu).setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
         NavigationView navigationView = findViewById(R.id.navigationView);
 

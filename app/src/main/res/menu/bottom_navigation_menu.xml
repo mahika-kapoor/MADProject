@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!---meditation, rant, yoga,anxiety-->
     <item
         android:id="@+id/bottom_meditation"
         android:title="@string/meditation"
         android:icon="@drawable/meditation_icon"/>
     <item
         android:id="@+id/bottom_rant"
-        android:title="@string/rant"
-        android:icon="@drawable/rant_icon"/>
+        android:title="@string/music"
+        android:icon="@drawable/ic_baseline_library_music_24"/>
     <item
         android:id="@+id/bottom_yoga"
         android:title="@string/yoga"
         android:icon="@drawable/yoga_icon"/>
     <item
         android:id="@+id/bottom_anxiety"
-        android:title="@string/anxiety"
-        android:icon="@drawable/anxiety_icon"/>
+        android:title="@string/scribble"
+        android:icon="@drawable/ic_baseline_draw_24"/>
 
 
 </menu>
