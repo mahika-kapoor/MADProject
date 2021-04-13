@@ -88,19 +88,19 @@ public class RantFragment extends Fragment {
         mbutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), medforsleep.class));
+                startActivity(new Intent(getActivity(), song2.class));
             }
         });
         mbutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), medforanger.class));
+                startActivity(new Intent(getActivity(), song3.class));
             }
         });
         mbutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), medforrelax.class));
+                startActivity(new Intent(getActivity(), song4.class));
             }
         });
 

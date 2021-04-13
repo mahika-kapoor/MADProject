@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class song1 extends AppCompatActivity {
     MediaPlayer player;
-    ImageView image;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

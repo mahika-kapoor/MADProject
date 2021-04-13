@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/top"
+    android:background="@color/pinkish"
+    tools:context=".song1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Joy to be free"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/dreams"
+        android:src = "@drawable/dreams"
+        android:layout_marginTop="65dp"
+        android:scaleType="fitXY" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="play"
+            android:text="Play"
+            app:icon="@drawable/ic_baseline_play_circle_filled_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/stop"
+            android:layout_toEndOf="@id/start"
+            android:onClick="pause"
+            android:text="Pause"
+            app:icon="@drawable/ic_baseline_pause_circle_filled_24"
+            app:layout_constraintEnd_toStartOf="@id/stop"
+            app:layout_constraintStart_toEndOf="@id/start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="stop"
+            android:text="Stop"
+            app:icon="@drawable/ic_baseline_stop_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
