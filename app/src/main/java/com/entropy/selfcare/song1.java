@@ -18,7 +18,7 @@ public class song1 extends AppCompatActivity {
     }
     public void play(View v) {
         if (player == null) {
-            player = MediaPlayer.create(this, R.raw.song2);
+            player = MediaPlayer.create(this, R.raw.song1);
             player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
