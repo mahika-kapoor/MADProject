@@ -1,12 +1,16 @@
 package com.entropy.selfcare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,4 +65,45 @@ public class RantFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rant, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Button mbutton1 = null;
+        Button mbutton2 = null;
+        Button mbutton3 = null;
+        Button mbutton4 = null;
+
+
+        mbutton1 = view.findViewById(R.id.button1);
+        mbutton2 = view.findViewById(R.id.button2);
+        mbutton3 = view.findViewById(R.id.button3);
+        mbutton4 = view.findViewById(R.id.button4);
+        mbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), song1.class));
+            }
+        });
+        mbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforsleep.class));
+            }
+        });
+        mbutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforanger.class));
+            }
+        });
+        mbutton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), medforrelax.class));
+            }
+        });
+
+    }
+
 }

@@ -5,12 +5,68 @@
     android:layout_height="match_parent"
     tools:context=".RantFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rant"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
 
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="15dp"
+        android:text="Music for Relaxation"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/gridview"
+        android:layout_width="323dp"
+        android:layout_height="534dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="80sp"
+        android:background="@color/white"
+        android:columnCount="1"
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:background="@color/pinkish"
+            android:text="Under the night sky"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button2"
+
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="2"
+            android:layout_margin="5sp"
+            android:background="@color/pinkish"
+            android:text="Ambient piano chill music"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:background="@color/pinkish"
+            android:text="Classic slow Jazz"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:background="@color/pinkish"
+            android:text="joy to be free"
+            android:textSize="15sp" />
+
+
+
+    </GridLayout>
 </FrameLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/top"
+    android:background="@color/pinkish"
+    tools:context=".song1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Under the night sky"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/night"
+        android:src = "@drawable/night"
+        android:layout_marginTop="65dp"
+        android:scaleType="fitXY"
+         />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="575sp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start"
+            app:icon="@drawable/ic_baseline_play_circle_filled_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="play"
+            android:text="Play"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            app:icon="@drawable/ic_baseline_pause_circle_filled_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/start"
+            android:layout_toStartOf="@id/stop"
+            android:onClick="pause"
+            android:text="Pause"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/start"
+            app:layout_constraintEnd_toStartOf="@id/stop" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop"
+            app:icon="@drawable/ic_baseline_stop_circle_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="stop"
+            android:text="Stop"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+
+
