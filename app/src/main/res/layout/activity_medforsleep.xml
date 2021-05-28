@@ -16,54 +16,60 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
     <TextView
+        android:id="@+id/txtSleepHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meditation for Sleep"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="37dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <ImageView
+        android:id="@+id/imgSleep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/medforsleep"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txtSleepHead"/>
     <TextView
+        android:id="@+id/txtSleepText"
+        android:layout_below="@+id/imgSleep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="A slow meditation session to put you to Sleep"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="10dp"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/countdown_text"
+        android:layout_below="@+id/txtSleepText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
         tools:text="20:00"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/countdown_button"
-        android:layout_marginTop="520dp"
+        android:layout_below="@+id/countdown_text"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
     <TextView
+        android:id="@+id/txtSleepIns"
+        android:layout_below="@id/countdown_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "\nStep 1: Lie down in a comfortable position. Notice the weight of your body on the bed.\n
-\nStep 2: Start the Timer.\n
-\nStep 3: Focus on your face. Soften your jaw, eyes and facial muscles.\n
-\nStep 4: Move to your neck and shoulders. Relax them.\n
-\nStep 5: Continue down your body, moving to your arms and fingers. Continue to your stomach, back, hips, legs and feet. Notice how each part feels."
-        android:layout_marginTop="600dp"
+        android:text = "@string/sleep_instructions"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textSize="22sp"

@@ -16,25 +16,33 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
     <TextView
+        android:id="@+id/txtRelaxHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meditation To Relax"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="37dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <ImageView
+        android:id="@+id/imgRelax"
+        android:layout_below="@+id/txtRelaxHead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/medrelax"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="10dp"/>
     <TextView
+        android:id="@+id/txtRelaxText"
+        android:layout_below="@+id/imgRelax"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Meditation to help you Relax and Unwind"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textSize="30sp"
@@ -46,14 +54,16 @@
         android:layout_height="wrap_content"
         android:textSize="50sp"
         tools:text="20:00"
-        android:layout_marginTop="450dp"
+        android:layout_below="@+id/txtRelaxText"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/countdown_button"
-        android:layout_marginTop="520dp"
+        android:layout_below="@+id/countdown_text"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
@@ -62,7 +72,8 @@
 \nStep 2: Start the Timer.\n
 \nStep 3: Inhale for 10 counts, hold your breath for 10 counts and exhale for 10 counts. Repeat at least 10 times.\n
 \nStep 4: Inhale and tense your body. Pause, relax and exhale. Repeat at least 5 times."
-        android:layout_marginTop="600dp"
+        android:layout_below="@+id/countdown_button"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textSize="22sp"

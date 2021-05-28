@@ -32,6 +32,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="sleep_instructions">\nStep 1: Lie down in a comfortable position. Notice the weight of your body on the bed.\n \nStep 2: Start the Timer.\n \nStep 3: Focus on your face. Soften your jaw, eyes and facial muscles.\n \nStep 4: Move to your neck and shoulders. Relax them.\n \nStep 5: Continue down your body, moving to your arms and fingers. Continue to your stomach, back, hips, legs and feet. Notice how each part feels.</string>
+    <string name="Anger_instructions">\nStep 1: Start by taking deep breaths. Breathe in through your nose, let your belly fill with air. Breathe out through your nose.\n \nStep 2: Start the Timer.\n \nStep 3: Do \'hmm\' and hold it for as long as you can. Feel the vibrations in your throat and jaw.\n \nStep 4: Alternate between Step 1 and 3 till you feel considerably more calm.</string>
 
 
     <string-array name="mycolors">

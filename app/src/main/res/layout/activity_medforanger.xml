@@ -16,25 +16,31 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
     <TextView
+        android:id="@+id/txtAngerHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meditation for Anger"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="37dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
     <ImageView
+        android:id="@+id/imgAnger"
+        android:layout_below="@+id/txtAngerHead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/medanger"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="10dp"/>
     <TextView
+        android:id="@+id/txtAngerText"
+        android:layout_below="@id/imgAnger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Meditation to control your Anger"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textSize="30sp"
@@ -57,12 +63,10 @@
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
+        android:layout_below="@+id/countdown_button"
         android:layout_height="wrap_content"
-        android:text = "\nStep 1: Start by taking deep breaths. Breathe in through your nose, let your belly fill with air. Breathe out through your nose.\n
-\nStep 2: Start the Timer.\n
-\nStep 3: Do 'hmm' and hold it for as long as you can. Feel the vibrations in your throat and jaw.\n
-\nStep 4: Alternate between Step 1 and 3 till you feel considerably more calm."
-        android:layout_marginTop="680dp"
+        android:text = "@string/Anger_instructions"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textSize="22sp"

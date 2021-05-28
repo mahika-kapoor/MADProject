@@ -19,27 +19,33 @@
 
 
     <TextView
+        android:id="@+id/txtMeditateHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meditation for Stress"
         android:layout_marginHorizontal="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="37dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/medstress"/>
     <TextView
+        android:id="@+id/txtMeditateText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Meditate for just 10 minutes to brighten up your day!"
         android:textAlignment="center"
         android:textColor="#CA5A5A"
         android:layout_marginTop="350dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <TextView
         android:id="@+id/countdown_text"
@@ -47,15 +53,17 @@
         android:layout_height="wrap_content"
         android:textSize="50sp"
         tools:text= "10:00"
-        android:layout_marginTop="450dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtMeditateText"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/countdown_button"
-        android:layout_marginTop="520dp"
+        android:layout_below="@id/countdown_text"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"/>
      <TextView
          android:layout_width="match_parent"
@@ -64,8 +72,11 @@
 \nStep 2: Start the Timer.\n
 \nStep 3: Breathe in for 2 counts, and breathe out for 3 counts.\n
 \nStep 4: With every exhale, feel yourslef expelling all thoughts from your head until all that you can think of is your breathing"
-         android:layout_marginTop="600dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
          android:textSize="22sp"
+         android:layout_below="@+id/countdown_button"
          android:textColor="@color/black"
          />
     </RelativeLayout>

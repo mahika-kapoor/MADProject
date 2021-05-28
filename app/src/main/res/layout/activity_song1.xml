@@ -13,12 +13,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Under the night sky"
+        android:text="Under the Night Sky"
         android:gravity="center_horizontal"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_marginBottom="20sp"
-        android:layout_marginTop="20sp"/>
+        android:layout_marginTop="15sp"/>
 
     <ImageView
         android:layout_width="match_parent"
