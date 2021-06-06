@@ -2,6 +2,7 @@ package com.entropy.selfcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,22 +20,25 @@ public class SplashScreen extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 5000;
     TextView txt1,txt2,in,out;
     LottieAnimationView animation;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        sp = getSharedPreferences("login",MODE_PRIVATE);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        new Handler().postDelayed(new Runnable (){
-            @Override
-            public void run(){
-                Intent mainIntent = new Intent(SplashScreen.this,MainActivity.class);
-                startActivity(mainIntent);
-                finish();
-            }
-
+        new Handler().postDelayed(() -> {
+            Intent intent;
+            if (sp.getBoolean("logged", false))
+                intent = new Intent(SplashScreen.this,HomePage.class);
+            else
+                intent = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         },SPLASH_TIME_OUT);
 
         txt1 = findViewById(R.id.txt1);

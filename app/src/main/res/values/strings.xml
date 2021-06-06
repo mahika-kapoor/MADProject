@@ -42,5 +42,6 @@
         <item>GREEN</item>
         <item>BLUE</item>
         <item>YELLOW</item>
+        <item>PURPLE</item>
     </string-array>
 </resources>

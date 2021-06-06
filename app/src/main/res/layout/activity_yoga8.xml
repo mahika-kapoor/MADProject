@@ -21,7 +21,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="66dp"
-                android:text="The Warrior Pose"
+                android:text="The Headstand Pose"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
@@ -31,7 +31,7 @@
                 android:layout_width="278dp"
                 android:layout_height="252dp"
                 android:layout_gravity="center"
-                android:src="@drawable/yoga5"/>
+                android:src="@drawable/yoga9"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,9 +46,18 @@
                 android:layout_width="343dp"
                 android:layout_height="209dp"
                 android:layout_marginLeft="15sp"
-                android:text="1. Stand Straight. \n2. Raise both your hands to shoulder level aligned.
-        \n3. Bend your right leg. \n4. Your left leg should lie behind your back.
-        \n5. Remain in the pose for 30 seconds and then repeat again with left leg."
+                android:text="1. Get on your hands and knees with your wrists under your shoulders and your knees under your hips.
+\n2. Bring your forearms to the floor, keeping your elbows directly under your shoulders.
+\n3. Clasp each hand around the opposite elbow. Adjust as needed to ensure your elbows are the right distance apart. Release your hands from your elbows.
+\n4. Clasp your hands together on the floor, interlacing your fingers.
+\n5. Place the crown of your head on the floor. The back of your head will rest at the bases of your thumbs rather than your hands holding your skull.
+\n6. Lift your hips and straighten your legs as if you were doing Downward-Facing Dog.
+\n7. Carefully walk your feet in toward your head until your hips are as close to over your shoulders as possible.
+\n8. Lift your right foot to bring your right knee to your chest.
+\n9. Take a few deep breaths. When you feel steady, inhale and engage your core muscles.
+\n10. In a slow, controlled, movement exhale as you lift your left foot and bring it to your chest alongside your right.
+\n11. Breathe deeply and keep your core engaged for as long as you remain in the headstand pose.
+"
                 android:textSize="20sp" />
 
             <TextView
@@ -64,8 +73,11 @@
                 android:id="@+id/textView3"
                 android:layout_width="348dp"
                 android:layout_height="111dp"
-                android:text="1. Good for core strength. \n2. Improves joint condition.
-        \n3. Good for weight loss. \n4. Improves flexibility. \n"
+                android:text="1.Calms the mind.
+                \n2. Activates the pituitary and pineal glands.
+                \n3. Stimulates the lymphatic system.
+                \n3. Strengthens the upper body, spine, and core.
+                \n4. Enhances lung capacity."
                 android:textSize="20sp"
                 android:layout_marginLeft="15sp"
                 />

@@ -3,6 +3,7 @@ package com.entropy.selfcare;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.BaseAdapter;
@@ -15,15 +16,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    Button button;
+    Button btnRegister, btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.btnLogin);
-        button = (Button) findViewById(R.id.btnRegister);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
         textView = (TextView) findViewById(R.id.txtHeading);
     }
 
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(Start_page);
         }
     }
+
+    /*public void goToHomePage(){
+        Intent i = new Intent(this,HomePage.class);
+        startActivity(i);
+    }*/
 
 }
 

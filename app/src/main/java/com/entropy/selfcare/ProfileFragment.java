@@ -1,19 +1,25 @@
 package com.entropy.selfcare;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.io.FileNotFoundException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,6 +32,8 @@ public class ProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final int PICK_IMAGE = 25;
+    ImageView profilePic;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -76,19 +84,47 @@ public class ProfileFragment extends Fragment {
         FirebaseAuth fAuth;
         FirebaseFirestore fstore;
         String userID;
+        Button btnChangeProfileImage = null;
+
 
         fullName = view.findViewById(R.id.txtProfileName);
         email = view.findViewById(R.id.txtProfileEmail);
+
+        profilePic = view.findViewById(R.id.imgProfilePic);
+        btnChangeProfileImage = view.findViewById(R.id.btnChangeProfile);
+
+        btnChangeProfileImage.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+        });
+
 
         fAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
 
         userID = fAuth.getCurrentUser().getUid();
 
+
+
         DocumentReference documentReference = fstore.collection("users").document(userID);
         documentReference.addSnapshotListener(getActivity(), (documentSnapshot, e) -> {
             fullName.setText(documentSnapshot.getString("fname"));
             email.setText(documentSnapshot.getString("email"));
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_IMAGE && resultCode == Activity.RESULT_OK && data != null) {
+            try {
+                profilePic.setImageBitmap(BitmapFactory.decodeStream(getContext().getContentResolver().openInputStream(data.getData())));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

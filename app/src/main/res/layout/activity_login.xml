@@ -64,9 +64,18 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/btnSignIn"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="Forgot Password?"
-        android:textColor="@color/white"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtRegisterLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtForgotPass"
+        android:text="Don't have an account? Register here."
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"/>
 
 </RelativeLayout>

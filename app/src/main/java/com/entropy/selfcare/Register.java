@@ -31,7 +31,7 @@ import java.util.Map;
 public class Register extends AppCompatActivity {
 
     FirebaseAuth fAuth;
-    TextView textView;
+    TextView textView, txtLoginLink;
     Button button;
     EditText mFullName,mEmail,mPass;
     ImageView imageView;
@@ -52,9 +52,17 @@ public class Register extends AppCompatActivity {
         mPass = (EditText) findViewById(R.id.edtNewPass);
         mEmail = (EditText) findViewById(R.id.edtEmail);
         imageView = (ImageView) findViewById(R.id.imgRegister);
+        txtLoginLink = (TextView) findViewById(R.id.txtLoginLink);
 
         fAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
+
+        txtLoginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Register.this, Login.class));
+            }
+        });
 
         if (fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),HomePage.class));
@@ -103,6 +111,8 @@ public class Register extends AppCompatActivity {
                         }
                     }
                 });
+
+
             }
         });
 

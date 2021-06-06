@@ -56,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:text="Benefits"
                 android:textSize="20sp"
+                android:layout_marginTop="10sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="15sp"/>
 
@@ -64,7 +65,7 @@
                 android:layout_width="348dp"
                 android:layout_height="111dp"
                 android:text="1. Good for Digestion. \n2. Improves lungs condition.
-        \n3. Can reduce back pain. \n4. Improves flexibilty. \n"
+        \n3. Can reduce back pain. \n4. Improves flexibility. \n"
                 android:textSize="20sp"
                 android:layout_marginLeft="15sp"
                 />

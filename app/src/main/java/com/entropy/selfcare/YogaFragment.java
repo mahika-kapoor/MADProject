@@ -83,7 +83,7 @@ public class YogaFragment extends Fragment {
         arrayList.add(new Person(R.drawable.yoga5, "Warrior Pose", "Intermediate Pose"));
         arrayList.add(new Person(R.drawable.yoga6, "Cobra Pose", "Intermediate Pose"));
         arrayList.add(new Person(R.drawable.yoga7, "Crossbow Pose", "Intermediate Pose"));
-        arrayList.add(new Person(R.drawable.yoga8, "Stone Pose", "Intermediate Pose"));
+        arrayList.add(new Person(R.drawable.yoga9, "Headstand Pose", "Advanced Pose"));
 
         PersonAdapter personAdapter = new PersonAdapter(getActivity(),R.layout.list_row,arrayList);
 
@@ -100,6 +100,12 @@ public class YogaFragment extends Fragment {
                 case 3: startActivity(new Intent(getActivity(),Yoga4.class));
                     break;
                 case 4: startActivity(new Intent(getActivity(),Yoga5.class));
+                    break;
+                case 5: startActivity(new Intent(getActivity(),Yoga6.class));
+                    break;
+                case 6: startActivity(new Intent(getActivity(),Yoga7.class));
+                    break;
+                case 7: startActivity(new Intent(getActivity(),Yoga8.class));
                     break;
                 default:
                     break;

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfCare">
-        <activity android:name=".song4"></activity>
+        <activity android:name=".Yoga8"></activity>
+        <activity android:name=".Yoga7" />
+        <activity android:name=".Yoga6" />
+        <activity android:name=".song4" />
         <activity android:name=".song3" />
         <activity android:name=".song2" />
         <activity android:name=".song1" />

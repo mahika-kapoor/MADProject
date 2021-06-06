@@ -21,7 +21,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="66dp"
-                android:text="The Warrior Pose"
+                android:text="The Cobra Pose"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
@@ -31,7 +31,7 @@
                 android:layout_width="278dp"
                 android:layout_height="252dp"
                 android:layout_gravity="center"
-                android:src="@drawable/yoga5"/>
+                android:src="@drawable/yoga6"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,9 +46,9 @@
                 android:layout_width="343dp"
                 android:layout_height="209dp"
                 android:layout_marginLeft="15sp"
-                android:text="1. Stand Straight. \n2. Raise both your hands to shoulder level aligned.
-        \n3. Bend your right leg. \n4. Your left leg should lie behind your back.
-        \n5. Remain in the pose for 30 seconds and then repeat again with left leg."
+                android:text="1. Lie on your belly. \n2. Come onto your forearms, with your elbows directly under your shoulders and parallel to each other.
+        \n3. Stretch your legs straight back, about hip-width apart. \n4. Spread your toes wide and press the tops of your feet into your mat.
+        \n5. Firm your legs, and roll your inner thighs up, your outer thighs down. Press your tailbone toward your feet, lengthening your lower back. \n6.Press down into your forearms to lift your chest up."
                 android:textSize="20sp" />
 
             <TextView
@@ -64,8 +64,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="348dp"
                 android:layout_height="111dp"
-                android:text="1. Good for core strength. \n2. Improves joint condition.
-        \n3. Good for weight loss. \n4. Improves flexibility. \n"
+                android:text="1. Strengthens the spine.\n2. Stretches chest and lungs, shoulders, and abdomen.
+                \n3. Tones the buttocks. \n4. Stimulates abdominal organs. \n5.Therapeutic for asthma. \n"
                 android:textSize="20sp"
                 android:layout_marginLeft="15sp"
                 />

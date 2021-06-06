@@ -21,7 +21,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="66dp"
-                android:text="The Warrior Pose"
+                android:text="The Crossbow Pose"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
@@ -31,7 +31,7 @@
                 android:layout_width="278dp"
                 android:layout_height="252dp"
                 android:layout_gravity="center"
-                android:src="@drawable/yoga5"/>
+                android:src="@drawable/yoga7"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,9 +46,12 @@
                 android:layout_width="343dp"
                 android:layout_height="209dp"
                 android:layout_marginLeft="15sp"
-                android:text="1. Stand Straight. \n2. Raise both your hands to shoulder level aligned.
-        \n3. Bend your right leg. \n4. Your left leg should lie behind your back.
-        \n5. Remain in the pose for 30 seconds and then repeat again with left leg."
+                android:text="1.Lie on your belly with your hands alongside your torso, palms up.
+                \n2.Exhale and bend your knees, bringing your heels as close as you can to your buttocks.
+                \n3.Reach back with your hands and take hold of your ankles.
+                \n4.Make sure your knees aren’t wider than the width of your hips, and keep your knees hip width for the duration of the pose.
+                \n5.Inhale and strongly lift your heels away from your buttocks and, at the same time, lift your thighs away from the floor.
+                \n6.Stay in this pose anywhere from 20 to 30 seconds. "
                 android:textSize="20sp" />
 
             <TextView
@@ -64,8 +67,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="348dp"
                 android:layout_height="111dp"
-                android:text="1. Good for core strength. \n2. Improves joint condition.
-        \n3. Good for weight loss. \n4. Improves flexibility. \n"
+                android:text="1.Bow pose opens your shoulders from the front of the body.
+            \n2.Relieves tightness and reducing slouching. \n3.Strengthens spine and hamstrings. \n4.Strengthens your spine extensors and hamstrings,
+            preventing or reducing lower back pain and injury"
                 android:textSize="20sp"
                 android:layout_marginLeft="15sp"
                 />

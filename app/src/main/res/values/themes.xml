@@ -15,4 +15,9 @@
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
     </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
